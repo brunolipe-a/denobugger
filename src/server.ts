@@ -1,8 +1,9 @@
-import { Application } from "https://deno.land/x/oak/mod.ts"
-import { router } from './routes.ts'
-import { startDB } from './app/database/index.ts'
+import { Application } from "https://deno.land/x/oak/mod.ts";
 
-await startDB()
+import { router } from "./routes.ts";
+import { startDB } from "./app/database/start.ts";
+
+await startDB();
 
 const app = new Application();
 
